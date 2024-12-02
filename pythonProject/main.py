@@ -1,6 +1,6 @@
 import requests
 
-from const import GITHUB_BASE_URL, user_name, repo_name, pat
+from const import GITHUB_BASE_URL, user_name, repo_name
 
 repository_url = f"{GITHUB_BASE_URL}/repos/{user_name}/{repo_name}/pulls"
 
@@ -14,3 +14,4 @@ if response.status_code == 200:
     print("Everything is working")
 else:
     print("Not working")
+
