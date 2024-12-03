@@ -1,9 +1,6 @@
 import requests
 
 
-repository_url_to_get_pulls = f"{GITHUB_BASE_URL}/repos/{user_name}/{repo_name}/pulls"
-repository_url_to_get_commits = f"{GITHUB_BASE_URL}/repos/{user_name}/{repo_name}/commits"
-repository_url_to_get_issues = f"{GITHUB_BASE_URL}/repos/{user_name}/{repo_name}/issues"
 
 
 # # result_lst = []
