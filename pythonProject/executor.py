@@ -35,7 +35,7 @@ class Executor:
 
     def get_header(self):
         headers = {'Authorization':
-                       f"Bearer {os.getenv('pat')}" }
+                       f"Bearer {self._token}" }
         return headers
 
     def execute(self):
