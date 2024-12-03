@@ -12,7 +12,8 @@ class GetBranches:
         response = requests.get(self.final_url, headers=self.header)
         if response.status_code == 200:
             result_lst = response.json()
-            print(result_lst)
-            print(len(result_lst))
+            print("Branches are good!")
             for r in result_lst:
                 print(r["name"])
+        else:
+            print("Branches are nor good!")
