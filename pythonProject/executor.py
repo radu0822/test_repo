@@ -12,7 +12,7 @@ class Executor:
         self._url = os.getenv('GITHUB_BASE_URL')
         self._repo = os.getenv('repo_name')
         self._owner = os.getenv('user_name')
-        self._token = os.getenv('pat')
+        # self._token = os.getenv('pat')
         self._header = self.get_header()
         self._main_url = self.get_main_url()
 
@@ -35,7 +35,7 @@ class Executor:
 
     def get_header(self):
         headers = {'Authorization':
-                       f"Bearer {self._token}" }
+                       f"Bearer {os.getenv('pat')}" }
         return headers
 
     def execute(self):
