@@ -29,6 +29,7 @@ class GetIssues(BaseClass):
         if respo.status_code == 200:
             logging.info("Issues are good")
             result_lst = respo.json()
-            logging.info(result_lst)
+            for result in result_lst:
+                logging.info(f"Issue : {result['title']} : {result['body']}")
         else:
             logging.info("Issues are not good")

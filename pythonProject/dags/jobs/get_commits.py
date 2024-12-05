@@ -25,6 +25,7 @@ class GetCommits(BaseClass):
             commits = response.json()
             logging.info("Here are the commits")
             res = [(commit["sha"], commit["commit"]["message"]) for commit in commits]
-            logging.info(res)
+            for result in res:
+                logging.info(result)
         else:
             logging.info("Not good")
