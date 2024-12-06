@@ -25,6 +25,7 @@ class GetPullRequests(BaseClass):
             result_lst = response.json()
             logging.info("Here are the pull requests")
             for result in result_lst:
-                logging.info(f"PR : {result['title']} : {result['body']}")
+                if result["draft"]:
+                    logging.info(f"PR : {result['title']} : {result['body']}")
         else:
             logging.info("Not good")
